@@ -2,5 +2,11 @@ canvas{
     border: 5px;
 }
 #bing{
-    margin-top: 50px;
+    margin-top: 150px;
+    font-size: larger;
+}
+
+#bing:hover{
+    box-shadow: 5px 3px coral;
+    background-color: red;
 }
