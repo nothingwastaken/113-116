@@ -1,4 +1,8 @@
+m_x = 0;
+m_y = 0;
+
 function preload(){
+    mustache = loadImage("https://i.postimg.cc/VvdJW4PG/m.png");
 }
 function setup(){
     canvas = createCanvas(300, 300);
@@ -12,6 +16,7 @@ function setup(){
 }
 function draw(){
     image(video,0,0,300,300);
+    image(mustache, m_x - 15, m_y + 10, 37, 26);
 }
 
 function save(){
@@ -27,5 +32,7 @@ function gotPoses(results){
     console.log(results);
     console.log("nose x = " + results[0].pose.nose.x);
     console.log("nose y = " + results[0].pose.nose.y);
+    m_x = results[0].pose.nose.x;
+    m_y = results[0].pose.nose.y;
     }
 }
